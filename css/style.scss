@@ -1,0 +1,84 @@
+// client section
+
+.client_section {
+  .heading_container {
+    align-items: center;
+    margin-bottom: 45px;
+  }
+
+  .client_container {
+    width: 85%;
+    margin: auto;
+    border: 1px solid $black;
+
+    .box {
+      display: flex;
+      margin: 55px 2%;
+
+      .img-box {
+        min-width: 100px;
+        margin-right: 15px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .detail-box {
+        h5 {
+          display: flex;
+          font-weight: bold;
+          align-items: center;
+
+          hr {
+            width: 45px;
+            height: 5px;
+            margin: 0;
+            margin-left: 5px;
+            border: none;
+            background-color: $black;
+          }
+        }
+      }
+    }
+
+    div#carouselExampleControls {
+
+      padding: 0 10%;
+
+      &::before {
+        content: "";
+        width: 50px;
+        height: 155px;
+        background-color: $primary2;
+        position: absolute;
+        left: 10%;
+        top: 37px;
+      }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 45px;
+      height: 45px;
+      background-color: $primary2;
+      border-radius: 100%;
+      top: 50%;
+      opacity: 1;
+      transform: translateY(-50%);
+      background-size: 10px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .carousel-control-prev {
+      background-image: url(../images/prev-white.png);
+      left: 10px;
+    }
+
+    .carousel-control-next {
+      background-image: url(../images/next-white.png);
+      right: 10px;
+    }
+  }
+}
