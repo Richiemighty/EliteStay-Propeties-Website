@@ -327,7 +327,13 @@ header .intro-text {
 #services .service-desc hr {
 	margin-left: 0;
 }
-/* Portfolio Section */
+
+
+
+
+
+
+
 #portfolio {
 	padding: 100px 0;
 	background: #f6f6f6;
@@ -364,7 +370,7 @@ header .intro-text {
 }
 .hover-bg:hover .hover-text>h4 {
 	opacity: 1;
-	/* -webkit-backface-visibility: hidden; */
+	-webkit-backface-visibility: hidden;
 	-webkit-transform: translateY(0);
 	transform: translateY(0);
 }
@@ -380,42 +386,64 @@ header .intro-text {
 
 
 /* Testimonials Section */
-#testimonials {
-	padding: 100px 0;
+/* General Testimonials Section */
+/* Testimonial content styling */
+/* .\ */
+
+
+/* Centering the testimonial text */
+/* Ensure the carousel is centered and has no dark overlay */
+.carousel-inner {
+background: transparent !important; /* Remove any background */
+text-align: center; /* Center all text inside carousel items */
 }
-#testimonials i {
-	color: #e6e6e6;
-	font-size: 32px;
-	margin-bottom: 20px;
-}
+
+/* Adjust carousel text and container alignment */
 .testimonial {
-	position: relative;
-	padding: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 150px; 
+/* Adjust to your preferred height */
 }
-.testimonial-image {
-	float: left;
-	margin-right: 15px;
-}
-.testimonial-image, .testimonial-image img {
-	display: block;
-	width: 64px;
-	height: 64px;
-}
+
+/* Adjust text within testimonials */
 .testimonial-content {
-	position: relative;
-	overflow: hidden;
+padding: 20px;
+background-color: rgba(255, 255, 255, 0.7); /* Optional: add slight background for better readability */
+border-radius: 5px;
+max-width: 600px;
+margin: auto;
 }
-.testimonial-content p {
-	margin-bottom: 0;
-	font-size: 14px;
-	font-style: italic;
+
+/* Align chevron buttons vertically centered */
+.carousel-control {
+	background-color: transparent;
+	top: 50%;
+	transform: translateY(-50%);
 }
+
+
+
+
+/* Ensure the indicators are centered */
+.carousel-indicators {
+position: absolute;
+bottom: 10px;
+left: 50%;
+transform: translateX(-50%);
+}
+
+/* Style testimonial text */
 .testimonial-meta {
-	margin-top: 10px;
-	font-size: 13px;
-	font-weight: bold;
-	text-transform: uppercase;
+font-style: italic;
+font-weight: bold;
+margin-top: 10px;
+color: #555;
 }
+
+
+
 
 
 
@@ -568,6 +596,40 @@ header{
 
 
 
+
+
+.social-icons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-icons a img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
 #about img {
 	margin: 50px 0;
@@ -582,6 +644,24 @@ header{
 	}
 	#title{
 		font-size: 50px;
+
+	}
+	.social-icons a img {
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		cursor: pointer;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	  }
+}
+@media (max-width: 400px) {
+	.intro-text{
+		width: 100%;
+		text-align: center;
+	}
+	#title{
+		font-size: 40px;
 
 	}
 }
