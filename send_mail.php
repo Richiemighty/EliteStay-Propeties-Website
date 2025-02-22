@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Recipients
         $mail->setFrom('your_email@gmail.com', 'Your Website'); // Sender's email and name
-        $mail->addAddress('richiemighty5@gmail.com');   // Recipient's email
+        $mail->addAddress('info@elitestaypropertiesltd.co.uk');   // Recipient's email
 
         // Content
         $mail->isHTML(true);                                // Set email format to HTML
